@@ -1,0 +1,148 @@
+:root{
+    --terminal-width: 700px;
+    --border-radius: 6px;
+}
+
+body{
+    padding:0;
+    margin: 0;
+}
+
+*{
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+@keyframes blink{
+    from {
+        opacity: 1;
+    }
+    to{
+        opacity: 0.1;
+    }
+}
+
+.container{
+    color:#d9d9d9;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.container span{
+    font-size: 7rem;
+    font-weight: 100;
+    animation: blink  infinite;
+}
+
+.blink{
+    animation-name: blink;
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+body{
+    background-color: #14181e;
+}
+
+::-webkit-scrollbar{
+    background-color:#3c3c3c;;
+    width: 8px;
+    border-top-right-radius: 6px;
+}
+
+
+::-webkit-scrollbar-thumb{
+    color:red;
+    background-color: #919191;
+    border-radius: var(--border-radius);
+}
+
+#terminal-welcome{
+    opacity: 0;
+    animation: fadeIn 1s ease 0.5s;
+    animation-fill-mode: forwards;
+}
+
+
+.terminal{
+    overflow-y: scroll;
+    color:#d9d9d9;
+    width: 100%;
+    height: 400px;
+    background-color:#14181e;
+    margin:0 auto;
+    margin-top: 100px;
+
+    padding: 10px;
+
+    border: 1px solid rgb(29 29 29);
+    border-bottom: none;
+
+    border-top-right-radius: var(--border-radius);
+    border-top-left-radius: var(--border-radius);
+}
+
+.terminal span{
+    white-space: pre-wrap;
+    margin:0;
+}
+
+
+.terminal-container{
+    width: 100%;
+    margin: 0 auto;
+    position:relative;
+    border: 1px solid rgb(29 29 29);
+    border-top: none;
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+}
+
+
+.terminal-input{
+    position:relative;
+    background-color: #0c0c0c;
+    width: 100%;
+    border:none;
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+    padding: 10px;
+    padding-left: 24px;
+    color: #bbbbbb;
+    outline: none;
+}
+
+.terminal-container::after{
+    content: '>';
+    position:absolute;
+    top:10px;
+    left: 10px;
+    color:white;
+    display:block;
+}
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+}
+
+
+@media screen and (min-width: 700px){
+    .terminal{
+        width: 90%;
+    }
+
+    .terminal-container{
+        width: 90%;
+    }
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liaison Terminal</title>
+    <link rel="stylesheet" href="index.css">
+
+    <!-- scripts -->
+    <script src='external/dom_el_init.js' defer></script>
+    <!-- <script src='external/STDIN.js' defer></script>
+    <script src='external/STDOUT.js' defer></script> -->
+    
+</head>
+<body>
+
+    <div id='intro' class="container">
+    </div>
+    
+    <div id="terminal" style="display: none">
+        <div class="terminal" style="font-size: 14px;">
+        </div>
+        <div class="terminal-container">
+            <input class="terminal-input" type="text" autocorrect="off" placeholder="enter input here"/>
+        </div>
+    </div>
+
+    <script src='dist/bundle.js'></script>
+
+    <script>
+        var hello = "bruh";
+    </script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+Terminal:
+    ✔ History functionality @done(21-06-27 00:11)
+        Stores the commands recently executed and allows to traverse through the history and use them.
+
+    Job search api: 
+        ☐ Bootstrap the application, provide skeleton @1h @started(21-06-27 08:39)
+        ☐ Implement the api @1h
+ 
+
+
+
+Archive:
